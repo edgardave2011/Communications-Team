@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>store_name</field>
+        <global>true</global>
+        <messages/>
+        <name>Caller is Store</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+
+    var caller;
+
+    if (isLoading || newValue == "") {
+        //In case it's empty, it aborts and let the UI Policy carry on the rules
+        //FGE - Hide Store User Name OnLoad
+        return false;
+    }
+
+    if (!g_form.getControl("store_name")) {
+        return false;
+    }
+
+    caller = g_form.getReference("store_name", setUserName);
+
+    function setUserName(caller) {
+        if (caller) {
+            if (caller.u_user_type == "store") {
+                g_form.setDisplay("store_contact", true);
+				g_form.setMandatory("store_contact", true);
+            } else {
+                g_form.setValue("store_contact", "");
+				g_form.setMandatory("store_contact", false);
+				g_form.setDisplay("store_contact", false);
+            }
+        }
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>david.edgar</sys_created_by>
+        <sys_created_on>2017-08-10 14:11:45</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4ed6e5704f200b0021a168d18110c726</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Caller is Store</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Communications Team" source="x_spog_commsteam">a86a01f44facc70021a168d18110c7f4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Communications Team">a86a01f44facc70021a168d18110c7f4</sys_scope>
+        <sys_update_name>sys_script_client_4ed6e5704f200b0021a168d18110c726</sys_update_name>
+        <sys_updated_by>david.edgar</sys_updated_by>
+        <sys_updated_on>2017-08-10 14:11:45</sys_updated_on>
+        <table>x_spog_commsteam_table</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

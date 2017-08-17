@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_dictionary_override">
+    <sys_dictionary_override action="INSERT_OR_UPDATE">
+        <attributes/>
+        <attributes_override>false</attributes_override>
+        <base_table>task</base_table>
+        <calculation/>
+        <calculation_override>false</calculation_override>
+        <default_value/>
+        <default_value_override>false</default_value_override>
+        <dependent/>
+        <dependent_override>false</dependent_override>
+        <display_override>false</display_override>
+        <element>assignment_group</element>
+        <mandatory>false</mandatory>
+        <mandatory_override>false</mandatory_override>
+        <name>x_spog_commsteam_table</name>
+        <read_only>false</read_only>
+        <read_only_override>false</read_only_override>
+        <reference_qual>type=c4349df04fecc70021a168d18110c78d</reference_qual>
+        <reference_qual_override>true</reference_qual_override>
+        <sys_class_name>sys_dictionary_override</sys_class_name>
+        <sys_created_by>david.edgar</sys_created_by>
+        <sys_created_on>2017-08-10 14:07:26</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>9d36ad304f200b0021a168d18110c7a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>assignment_group</sys_name>
+        <sys_package display_value="Communications Team" source="x_spog_commsteam">a86a01f44facc70021a168d18110c7f4</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Communications Team">a86a01f44facc70021a168d18110c7f4</sys_scope>
+        <sys_update_name>sys_dictionary_override_9d36ad304f200b0021a168d18110c7a2</sys_update_name>
+        <sys_updated_by>david.edgar</sys_updated_by>
+        <sys_updated_on>2017-08-10 14:07:26</sys_updated_on>
+    </sys_dictionary_override>
+</record_update>

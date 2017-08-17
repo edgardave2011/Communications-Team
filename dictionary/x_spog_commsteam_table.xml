@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="email_client=true" audit="true" extends="task" label="Communications Team Table" max_length="40" name="x_spog_commsteam_table" sizeclass="2" type="collection">
+        <element label="Alternative Contact Number" max_length="40" name="alternative_contact_number" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Category" max_length="40" name="category" type="string">
+            <choice>
+                <element label="Analysis" sequence="0" value="Analysis"/>
+                <element label="Info Update" sequence="1" value="Info Update"/>
+                <element label="Local Marketing" sequence="2" value="Local Marketing"/>
+                <element label="National Marketing" sequence="3" value="National Marketing"/>
+                <element label="Other Departments" sequence="4" value="Other Departments"/>
+                <element label="Strategy" sequence="5" value="Strategy"/>
+                <element label="Voucher Changes" sequence="6" value="Voucher Changes"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Store Contact" max_length="40" name="store_contact" type="string"/>
+        <element label="Requestor" mandatory="true" max_length="32" name="store_name" reference="sys_user" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" dependent="category" dependent_on_field="category" label="Sub-Category" max_length="40" name="sub_category" type="string" use_dependent_field="true">
+            <choice>
+                <element dependent_value="Analysis" label="Demographics" sequence="0" value="Demographics"/>
+                <element dependent_value="Analysis" label="Door Drops" sequence="1" value="Door Drops Analysis"/>
+                <element dependent_value="Analysis" label="Maps" sequence="2" value="Maps"/>
+                <element dependent_value="Analysis" label="Market Share" sequence="3" value="Market Share"/>
+                <element dependent_value="Analysis" label="Voucher Redemptions" sequence="4" value="Voucher Redemptions"/>
+                <element dependent_value="Info Update" label="Additional info for Store Page" sequence="5" value="Additional info for Store Page"/>
+                <element dependent_value="Info Update" label="Opening Times" sequence="6" value="Opening Times"/>
+                <element dependent_value="Info Update" label="Partner Names and Credentials" sequence="7" value="Partner Names and Credentials"/>
+                <element dependent_value="Info Update" label="Partner Photos" sequence="8" value="Partner Photos"/>
+                <element dependent_value="Local Marketing" label="Artwork Requests" sequence="9" value="Artwork Requests"/>
+                <element dependent_value="Local Marketing" label="Book Media" sequence="10" value="Book Media"/>
+                <element dependent_value="Local Marketing" label="Invoice &amp; Slins" sequence="11" value="Invoice &amp; Slins"/>
+                <element dependent_value="Local Marketing" label="Liability Insurance" sequence="12" value="Liability Insurance"/>
+                <element dependent_value="Local Marketing" label="Media Plan Review (Specslink)" sequence="13" value="Media Plan Review (Specslink)"/>
+                <element dependent_value="Local Marketing" label="POS" sequence="14" value="POS"/>
+                <element dependent_value="Local Marketing" label="PR/Sponsorships" sequence="15" value="PR/Sponsorships"/>
+                <element dependent_value="Local Marketing" label="Promotional Material" sequence="16" value="Promotional Material"/>
+                <element dependent_value="Local Marketing" label="Promotional Staff" sequence="17" value="Promotional Staff"/>
+                <element dependent_value="Local Marketing" label="School Screener" sequence="18" value="School Screener"/>
+                <element dependent_value="Local Marketing" label="Vinyls" sequence="19" value="Vinyls"/>
+                <element dependent_value="National Marketing" label="Campaign" sequence="20" value="Campaign"/>
+                <element dependent_value="National Marketing" label="Digital" sequence="21" value="Digital"/>
+                <element dependent_value="Strategy" label="Divisional Marketing Plan" sequence="22" value="Divisional Marketing Plan"/>
+                <element dependent_value="National Marketing" label="Door Drops" sequence="23" value="Door Drops National Marketing"/>
+                <element dependent_value="National Marketing" label="Ethnicity/Diversity" sequence="24" value="Ethnicity/Diversity"/>
+                <element dependent_value="National Marketing" label="Hearcare" sequence="25" value="Hearcare"/>
+                <element dependent_value="National Marketing" label="Heathcall" sequence="26" value="Heathcall"/>
+                <element dependent_value="National Marketing" label="New Medica" sequence="27" value="New Medica"/>
+                <element dependent_value="National Marketing" label="Product Launches" sequence="28" value="Product Launches"/>
+                <element dependent_value="Other Departments" label="BD" sequence="29" value="BD"/>
+                <element dependent_value="Other Departments" label="DM" sequence="30" value="DM"/>
+                <element dependent_value="Other Departments" label="FCR" sequence="31" value="FCR"/>
+                <element dependent_value="Other Departments" label="Implementation" sequence="32" value="Implementation"/>
+                <element dependent_value="Other Departments" label="Legal" sequence="33" value="Legal"/>
+                <element dependent_value="Other Departments" label="Partner Support Desk" sequence="34" value="Partner Support Desk"/>
+                <element dependent_value="Other Departments" label="Procurement" sequence="35" value="Procurement"/>
+                <element dependent_value="Other Departments" label="Product" sequence="36" value="Product"/>
+                <element dependent_value="Strategy" label="BD Works" sequence="37" value="BD Works"/>
+                <element dependent_value="Strategy" label="Own Your Town (Competitors)" sequence="39" value="Own Your Town (Competitors)"/>
+                <element dependent_value="Voucher Changes" label="Flyer send out" sequence="40" value="Flyer send out"/>
+                <element dependent_value="Voucher Changes" label="Other Local Media" sequence="41" value="Other Local Media"/>
+                <element dependent_value="Voucher Changes" label="Recall Vouchers" sequence="42" value="Recall Vouchers"/>
+                <element dependent_value="Voucher Changes" label="Web/Online Vouchers" sequence="43" value="Web/Online Vouchers"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Alternative Contact Number" max_length="40" name="u_alternative_contact_number" type="string"/>
+    </element>
+</database>
